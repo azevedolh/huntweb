@@ -25,10 +25,6 @@ export default class Main extends Component {
   prevPage = () => {
     const { page, productInfo } = this.state;
 
-    if (page === 1) {
-      return;
-    }
-
     const pageNumber = page - 1;
 
     this.loadProducts(pageNumber);
@@ -52,8 +48,6 @@ export default class Main extends Component {
       productInfo: { pages },
       page
     } = this.state;
-
-    console.log("passou aqui ");
 
     return (
       <div className="product-list">
